@@ -76,3 +76,4 @@ This project is a conversational business intelligence agent that can query and 
     - For questions about the AdventureWorks database, the copilot will use the SQL handler.
 
 # logos
+# logos2
