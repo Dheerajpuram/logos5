@@ -15,11 +15,11 @@ def route_query(query: str) -> str:
     - Use SQL for queries that involve calculations, aggregations, or questions about structured data in a database.
       Examples: 'What are the total sales for the last quarter?', 'Show me the top 5 selling products.', 'How many users are there?'
 
-    - Use RAG for queries about the content of uploaded documents (like PDFs, Word documents, or Excel files). If the query is asking to summarize, analyze, or find specific information within a document, use RAG. **Even if a query sounds like a database query (e.g., 'what are the operating expenses?'), if it could plausibly be answered by a recently uploaded annual report or financial document, you should prioritize RAG.**
+    - Use RAG for queries about the content of uploaded documents (like PDFs, Word documents, or Excel files). If the query is asking to summarize, analyze, or find specific information within a document, use RAG. **Prioritize RAG for document-specific questions, especially if the query mentions summarizing, analyzing, or extracting information from the document itself.**
       Examples: 'What is the company's policy on remote work?', 'Summarize the key findings of the research paper.', 'What were the sales and marketing expenses last year?'
 
-    - Use CSV for queries on simple tabular data from a CSV file.
-      Examples: 'What is the price of product X?', 'List all products in the category Y.'
+    - Use CSV for queries on simple tabular data from a CSV file. **If a CSV file is selected and the query is about analyzing, forecasting, or extracting data from that file, prioritize CSV.**
+      Examples: 'What is the price of product X?', 'List all products in the category Y.', 'Forecast sales from this CSV.'
 
     Query: "{query}"
 
